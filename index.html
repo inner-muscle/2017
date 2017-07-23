@@ -147,7 +147,7 @@
       bevelEnabled: false,
     } );
     geometry_ready.center();
-    var geometry_clear = new THREE.TextGeometry( 'Clear!', {
+    var geometry_clear = new THREE.TextGeometry( '奇跡！', {
       font: response,
       size: 1.5,
       height: 0.1,
@@ -155,7 +155,7 @@
       bevelEnabled: false,
     } );
     geometry_clear.center();
-    var geometry_gover = new THREE.TextGeometry( 'GAME OVER', {
+    var geometry_gover = new THREE.TextGeometry( 'ざぁんねん！', {
       font: response,
       size: 1.5,
       height: 0.1,
@@ -208,7 +208,7 @@
       pos.set(-7.5,0.5,-2.5);
       vel.set(0,0,0);
       mesh.position.set(pos.x,pos.y,pos.z);
-      mesh.rotateY(0.001*elapsedTime);// 自転
+      mesh.rotateY(0.1*elapsedTime);// 自転
       if(mousedown){
         scene.remove(font_ready);
         state = STATE.PLAY;
@@ -250,7 +250,7 @@
       }
       pos.add(vel.clone().multiplyScalar(elapsedTime));
       mesh.position.set(pos.x,pos.y,pos.z);
-      mesh.rotateY(0.001*elapsedTime);// 自転
+      mesh.rotateY(0.1*elapsedTime);// 自転
       // 落ちた
       if(vel.y < -0.0001 * 10.0){
         state = STATE.GAMEOVER;
